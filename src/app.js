@@ -374,7 +374,7 @@ mDNSserver.getmDNSstate().then((state) => {
 });
 
 module.exports = { // for testing
-  httpServer: httpServer,
+  httpServer,
   server: httpsServer,
-  serverStartup: serverStartup,
+  serverStartup,
 };
