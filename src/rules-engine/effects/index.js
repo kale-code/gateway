@@ -28,6 +28,6 @@ function fromDescription(desc) {
 }
 
 module.exports = {
-  effects: effects,
-  fromDescription: fromDescription,
+  effects,
+  fromDescription,
 };
