@@ -30,6 +30,6 @@ function fromDescription(desc) {
 }
 
 module.exports = {
-  triggers: triggers,
-  fromDescription: fromDescription,
+  triggers,
+  fromDescription,
 };
