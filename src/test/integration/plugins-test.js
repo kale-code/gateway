@@ -56,7 +56,7 @@ describe('plugins/', function() {
     const code = await new Promise((resolve) => {
       plugin.process.p.on('exit', (code) => {
         console.log('Got exit code', code);
-        if (code == 42) {
+        if (code === 42) {
           plugin.restart = false;
           // When the process was restarted plugin.process will have
           // been reassigned, so we need to re-register the exit handler.
