@@ -87,7 +87,7 @@ const Menu = {
    * @param {Event} Click event.
    */
   handleClick: function(e) {
-    if (e.target.tagName != 'A') {
+    if (e.target.tagName !== 'A') {
       return;
     }
     this.hide();
