@@ -390,7 +390,7 @@ class AddonManager extends EventEmitter {
     this.emit(Constants.THING_REMOVED, thing);
 
     const deferredRemove = this.deferredRemove;
-    if (deferredRemove && deferredRemove.adapter == device.adapter) {
+    if (deferredRemove && deferredRemove.adapter === device.adapter) {
       this.deferredRemove = null;
       deferredRemove.resolve(device.id);
     }
@@ -524,7 +524,7 @@ class AddonManager extends EventEmitter {
     }
 
     // Verify that the name in the package matches the packageName
-    if (manifest.name != packageName) {
+    if (manifest.name !== packageName) {
       const err = `Name from package.json "${manifest.name}" doesn't ` +
                   `match the name from list.json "${packageName}"`;
       console.error(err);
