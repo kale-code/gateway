@@ -468,12 +468,12 @@ class Thing {
    */
   render(format) {
     const element = document.createElement('div');
-    if (format == Constants.ThingFormat.LINK_ICON) {
+    if (format === Constants.ThingFormat.LINK_ICON) {
       element.innerHTML = this.linkIconView().trim();
       return this.container.appendChild(element.firstChild);
     }
 
-    if (format == Constants.ThingFormat.EXPANDED) {
+    if (format === Constants.ThingFormat.EXPANDED) {
       element.innerHTML = this.expandedView().trim();
       return this.container.appendChild(element.firstChild);
     }
