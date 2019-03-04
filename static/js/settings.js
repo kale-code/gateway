@@ -523,7 +523,7 @@ const SettingsScreen = {
       const adaptersList = document.getElementById('adapters-list');
       adaptersList.innerHTML = '';
 
-      if (adapters.length == 0) {
+      if (adapters.length === 0) {
         noAdapters.classList.remove('hidden');
         adaptersList.classList.add('hidden');
       } else {
