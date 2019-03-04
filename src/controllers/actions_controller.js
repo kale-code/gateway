@@ -21,7 +21,7 @@ const ActionsController = PromiseRouter({mergeParams: true});
  */
 ActionsController.post('/', async (request, response) => {
   const keys = Object.keys(request.body);
-  if (keys.length != 1) {
+  if (keys.length !== 1) {
     const err = 'Incorrect number of parameters.';
     console.log(err, request.body);
     response.status(400).send(err);
@@ -92,7 +92,7 @@ ActionsController.post('/:actionName', async (request, response) => {
   const actionName = request.params.actionName;
 
   const keys = Object.keys(request.body);
-  if (keys.length != 1) {
+  if (keys.length !== 1) {
     const err = 'Incorrect number of parameters.';
     console.log(err, request.body);
     response.status(400).send(err);
