@@ -164,7 +164,7 @@ ActionInputForm.prototype.handleSubmit = function(e) {
   }
 
   for (const el of this.element.getElementsByTagName('select')) {
-    if (el.value.length == 0) {
+    if (el.value.length === 0) {
       continue;
     }
 
