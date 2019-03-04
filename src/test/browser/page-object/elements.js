@@ -22,7 +22,7 @@ class Elements {
         return await el.isExisting();
       }
       const elements = await rootElement.$$(selector);
-      if (elements.length == 0) {
+      if (elements.length === 0) {
         return false;
       }
       // Check that all elements are displayed which match the selector.
