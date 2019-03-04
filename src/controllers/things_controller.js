@@ -32,8 +32,8 @@ ThingsController.get('/', (request, response) => {
       response.status(400).send('Token must contain scope');
     } else {
       const scope = request.jwt.payload.scope;
-      if (scope.indexOf(' ') === -1 && scope.indexOf('/') == 0 &&
-        scope.split('/').length == 2 &&
+      if (scope.indexOf(' ') === -1 && scope.indexOf('/') === 0 &&
+        scope.split('/').length === 2 &&
         scope.split(':')[0] === Constants.THINGS_PATH) {
         Things.getThingDescriptions(request.get('Host'), request.secure)
           .then((things) => {
